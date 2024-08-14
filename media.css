@@ -1,0 +1,33 @@
+@media screen and (min-width: 768px) {
+    
+      #loginform{
+        width: 50%;
+      }  
+
+    }
+
+@media screen and (min-width: 1024px) {
+    
+        #loginform{
+          width: 40%;
+        }  
+
+
+  
+      }
+
+@media screen and (min-width: 1440px) {
+    
+        #loginform{
+          width: 30%;
+        }
+  
+      }
+
+@media screen and (min-width: 2560px) {
+    
+        #loginform{
+          width: 20%;
+        }
+  
+      }

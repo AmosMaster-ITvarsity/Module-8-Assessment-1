@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css"/>
+    <link rel="shortcut icon" href="image/DevLogo.png" type="image/x-icon">
+    <title>Log in | Registration</title>
+</head>
+<body>
+
+    <main id="loginform">
+
+        <div id="form1">
+
+            <h1> Log in</h1>
+
+            <i class="fa-solid fa-user-tie"></i>
+
+            <form>
+    
+                <label for="usernameInput">Username:</label> 
+                
+                <br>
+        
+                <input type="text" id="usernameInput" placeholder="Username" />
+    
+                <br> <br>
+    
+                <label for="passwordInput">Password:</label> 
+                
+                <br>
+                <input type="password" id="passwordInput" placeholder="Password" />
+    
+                <p id="sucess"></p>
+    
+                <div id="button">
+    
+                    <a href="#" onclick="verifyUser()" class="logbtn">Login</a>
+    
+                    <a href="register.html" class="signbtn">Sign Up</a>
+    
+                </div>
+    
+            </form>
+
+
+        </div>
+
+    </main>
+    
+    <script>
+
+        function verifyUser(){
+
+            var username = document.getElementById("usernameInput").value;
+            var password = document.getElementById("passwordInput").value;
+            
+            checkUserCreds(username, password);
+        }
+
+        function checkUserCreds(username, password){
+
+            var systemUsername = "Amos";
+            var sytemPassword = "Master@Amos";
+
+            if(username == systemUsername && password == sytemPassword){
+                document.getElementById("sucess").innerHTML = "Correct, Logging in...";
+            } else {
+                document.getElementById("sucess").innerHTML = "Incorrect username or password";
+            }
+        }
+
+
+    </script>
+
+
+</body>
+</html>

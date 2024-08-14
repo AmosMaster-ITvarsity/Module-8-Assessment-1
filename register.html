@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css"/>
+    <link rel="shortcut icon" href="image/DevLogo.png" type="image/x-icon">
+    <title>Sign Up</title>
+</head>
+<body>
+
+    
+    <main id="loginform">
+
+       <a href="index.html"> <i class="fa-solid fa-house"></i> </a>
+
+        <div id="form1">
+
+            <h1> New User Registration</h1>
+
+            <i class="fa-solid fa-user-plus"></i>
+
+            <form>
+    
+                <label for="usernameInput">Name:</label> 
+                
+                <br>
+        
+                <input type="text" id="usernameInput" placeholder="Your Name" />
+    
+                <br> <br>
+
+                <label for="usernameInput">Email Adress:</label> 
+                
+                <br>
+        
+                <input type="email" id="Email" placeholder="John@example.com" />
+    
+                <br> <br>
+    
+                <label for="passwordInput">Create Password</label> 
+                
+                <br>
+                <input type="password" id="passwordInput1" placeholder="Password" />
+
+                <br> <br>
+    
+                <label for="passwordInput">Confirm Password</label> 
+                
+                <br>
+                <input type="password" id="passwordInput2" placeholder="Password" />
+    
+                <p id="sucess"></p>
+    
+                <div id="button">
+    
+                    <a href="#" onclick="verifyPassword()" class="signbtn">Sign Up</a>
+    
+                </div>
+    
+            </form>
+
+
+        </div>
+
+    </main>
+    
+    <script>
+
+        //  Here JavaScript is verifying the password provided by the user if it match
+
+        function verifyPassword(){
+
+            var firstPassword = document.getElementById("passwordInput1").value;
+            var secondPassword = document.getElementById("passwordInput2").value;
+            
+            checkUserCreds(firstPassword, secondPassword);
+        }
+
+        function checkUserCreds(firstPassword, secondPassword){
+
+            var systemFistPassword = "Master@Amos";
+            var sytemSecondPassword = "Master@Amos";
+
+            if(firstPassword == systemFistPassword && secondPassword == sytemSecondPassword){
+                document.getElementById("sucess").innerHTML = "Account created successfully.. Check your email";
+            } else {
+                document.getElementById("sucess").innerHTML = "Password doesn't match";
+            }
+        }
+
+
+    </script>
+
+
+</body>
+</html>
